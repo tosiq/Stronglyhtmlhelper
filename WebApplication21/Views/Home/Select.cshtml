@@ -1,0 +1,31 @@
+﻿@model  List<WebApplication21.Models.Employee>
+@{
+    ViewBag.Title = "Select";
+}
+
+<h2>Select</h2><br />
+<a href="@Url.Action("Index","Home")"> Create</a><br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Password</th>
+        <th>age</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.id </td>
+            <td>@item.name </td>
+            <td>@item.password </td>
+            <td>@item.age </td>
+            <td><button class="btn btn-success">Delete</button>
+            <button class="btn btn-danger">Edit</button></td>
+
+        </tr>
+    }
+
+
+</table>

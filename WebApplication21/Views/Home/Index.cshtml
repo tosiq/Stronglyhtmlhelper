@@ -1,0 +1,38 @@
+﻿@model WebApplication21.Models.Employee
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Create</h2>
+@using (Html.BeginForm("Index","Home",FormMethod.Post))
+{
+   @Html.LabelFor(a =>a.id)<br />
+   @Html.TextBoxFor(a =>a.id, new{required="required",@class="form-control",placeholder="id...." })<br />
+
+@Html.LabelFor(a => a.name)<br />
+@Html.TextBoxFor(a => a.name, new { required = "required", @class = "form-control", placeholder = "name is..." })<br />
+
+@Html.LabelFor(a => a.password)<br />
+ @Html.TextBoxFor(a => a.password, new { required = "required", @class = "form-control", placeholder = "id...." })<br />
+
+@Html.LabelFor(a => a.age)<br />
+@Html.TextBoxFor(a => a.age, new { required = "required",min="10",max = "50", @class = "form-control", placeholder = "age...." })<br />
+    <input type="submit" class="btn btn-success"  />
+}
+@*<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Password</th>
+        <th>Age</th>
+        <th>Action</th>
+    </tr>
+    
+</table>
+
+<p>@ViewBag.id</p>
+<p>@ViewBag.name</p>
+<p>@ViewBag.password</p>
+<p>@ViewBag.age</p>*@
+
